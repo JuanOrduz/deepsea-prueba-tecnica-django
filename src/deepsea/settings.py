@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #Additional packages
+    'rest_framework',
+
     #DeepSea
     'group_manager'
 ]
