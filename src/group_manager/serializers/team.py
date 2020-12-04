@@ -1,6 +1,5 @@
 from rest_framework import serializers
 
-from group_manager.models.custom_user import CustomUser
 from group_manager.models.team import Team
 from group_manager.serializers.user_team import UserTeamSerializer
 from group_manager.business_logic import team as team_logic
@@ -12,16 +11,6 @@ class TeamSerializer(serializers.ModelSerializer):
         many=True,
         read_only=True
     )
-
-    # name = serializers.CharField(
-    #     required=True,
-    #     write_only=True
-    # )
-    #
-    # image = serializers.CharField(
-    #     required=True,
-    #     write_only=True
-    # )
 
     users_ids = serializers.ListField(
         required=True,
