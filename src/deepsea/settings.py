@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$+7ch_8cnp+t2$(8&f!y3q0m)179obl8=hnb$w_v47^pqzz!^e'
+SECRET_KEY = 'znkbh#e!52(&#xm7^#10!)w316ekjmh8jx4_cax_(i*h6q&qex'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,11 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #External Apps
-    'rest_framework',
-
-    #Deepsea Apps
-    'gestor_grupos'
+    #DeepSea
+    'group_manager'
 ]
 
 MIDDLEWARE = [
@@ -124,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'group_manager.CustomUser'
